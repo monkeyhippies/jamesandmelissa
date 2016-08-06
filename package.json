@@ -1,21 +1,21 @@
 {
-  "name": "redux-todos-example",
-  "version": "0.0.0",
-  "description": "Redux Todos example",
+  "name": "jamesandmelissa",
+  "version": "1.0.0",
+  "description": "Website for James and Melissa",
   "scripts": {
-    "start": "node server.js",
+    "express-server": "node server.js",
     "test": "cross-env NODE_ENV=test mocha --recursive --compilers js:babel-register --require ./test/setup.js",
     "test:watch": "npm test -- --watch"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/reactjs/redux.git"
+    "url": "https://github.com/monkeyhippies/jamesandmelissa.git"
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/reactjs/redux/issues"
+    "url": "https://github.com/monkeyhippies/jamesandmeliss"
   },
-  "homepage": "http://redux.js.org",
+  "homepage": "https://jamesandmelissa.com",
   "dependencies": {
     "babel-polyfill": "^6.3.14",
     "react": "^0.14.7",
@@ -23,6 +23,12 @@
     "react-redux": "^4.1.2",
     "redux": "^3.1.2"
   },
+  "engines": {
+    "node": ">= 0.6.0",
+    "npm": ">= 1.0.0"
+  },
+  "private": true,
+  "main": "index.js",
   "devDependencies": {
     "babel-core": "^6.3.15",
     "babel-loader": "^6.2.0",
