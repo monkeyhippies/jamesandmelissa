@@ -1,4 +1,5 @@
 #!/bin/env node
+var path = require('path')
 var webpack = require('webpack')
 var webpackDevMiddleware = require('webpack-dev-middleware')
 var webpackHotMiddleware = require('webpack-hot-middleware')
@@ -124,6 +125,7 @@ var SampleApp = function() {
         self.app.use(webpackDevMiddleware(compiler, { noInfo: true, publicPath: config.output.publicPath }))
         self.app.use(webpackHotMiddleware(compiler))
 
+        self.app.use(express.static(path.join(__dirname, 'public')));
         //  Add handlers for the app (from the routes).
         for (var r in self.routes) {
             self.app.get(r, self.routes[r]);
