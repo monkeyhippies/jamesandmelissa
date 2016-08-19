@@ -1,6 +1,19 @@
 let nextTodoId = 0
 let nextBoxId = 0
 
+
+export const acceptInvitation = () => {
+    return {
+        type: "ACCEPT_INVITATION"
+    }
+}
+
+export const declineInvitation = () => {
+    return {
+        type: "DECLINE_INVITATION"
+    }
+}
+
 export const addTodo = (text) => {
   return {
     type: 'ADD_TODO',
