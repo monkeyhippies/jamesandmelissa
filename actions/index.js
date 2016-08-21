@@ -1,6 +1,43 @@
+import fetch from 'isomorphic-fetch';
+
 let nextTodoId = 0
 let nextBoxId = 0
 
+
+export const REQUEST_INVITEES = 'REQUEST_INVITEES'
+function requestInvitees() {
+    return {
+    type: 'REQUEST_INVITEES'
+  }
+}
+
+export const RECEIVE_INVITEES = 'RECEIVE_INVITEES'
+function receiveInvitees(json) {
+  return {
+    type: RECEIVE_INVITEES,
+    invitees: json,
+    receivedAt: Date.now()
+  }
+}
+
+export function fetchInvitees() {
+    return function (dispatch) {
+        dispatch(requestInvitees())
+
+        // The function called by the thunk middleware can return a value,
+        // that is passed on as the return value of the dispatch method.
+
+        // In this case, we return a promise to wait for.
+        // This is not required by thunk middleware, but it is convenient for us.
+
+        return fetch('/api/invitees')
+          .then(response => response.json())
+          .then(json =>
+            // We can dispatch many times!
+            // Here, we update the app state with the results of the API call.
+            dispatch(receiveInvitees(json)))
+    }
+}
 
 export const acceptInvitation = () => {
     return {

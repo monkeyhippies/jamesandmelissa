@@ -16,6 +16,7 @@ export default class InvitationResponse extends React.Component {
 
         return (
         <div>
+            <button type="button" className="btn btn-info btn-lg" onClick={this.props.onInviteesClick}>Invitees</button>
             <h1>{responsePhrase}</h1>
             <button type="button" className={this.props.response == "yes" ? "btn btn-info btn-lg disabled" : "btn btn-info btn-lg"} onClick={this.props.onYesClick}>Yes</button>
             <button type="button" className={this.props.response == "no" ? "btn btn-info btn-lg disabled" : "btn btn-info btn-lg"} onClick={this.props.onNoClick} onClick={this.props.onNoClick}>No</button>

@@ -9,7 +9,9 @@ var compiler = webpack(config)
 
 var express = require('express');
 var fs      = require('fs');
+var mongoose = require('mongoose');
 
+var Invitee = require('./models/invitee.js');
 
 /**
  *  Define the sample application.
@@ -111,6 +113,7 @@ var SampleApp = function() {
             res.setHeader('Content-Type', 'text/html');
             res.send(self.cache_get('index.html') );
         };
+
     };
 
 
@@ -130,6 +133,19 @@ var SampleApp = function() {
         for (var r in self.routes) {
             self.app.get(r, self.routes[r]);
         }
+
+        mongoose.connect('mongodb://localhost/test');
+
+        self.app.get('/api/invitees', function (req, res){
+          return Invitee.find(function (err, invitees) {
+            if (!err) {
+              return res.send(invitees);
+            } else {
+              return console.log("HELLPP" + err);
+            }
+          });
+        });
+
     };
 
 

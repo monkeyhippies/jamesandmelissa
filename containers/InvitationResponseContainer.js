@@ -2,6 +2,7 @@ import { connect } from 'react-redux'
 import { acceptInvitation } from '../actions'
 import { declineInvitation } from '../actions'
 import InvitationResponse from '../components/InvitationResponse'
+import {fetchInvitees} from '../actions/index.js';
 
 const mapStateToProps = (state, ownProps) => {
   return state.invitationResponse
@@ -14,6 +15,9 @@ const mapDispatchToProps = (dispatch, ownProps) => {
     },
     onNoClick: () => {
       dispatch(declineInvitation())
+    },
+    onInviteesClick: () => {
+      dispatch(fetchInvitees())
     }
   }
 }
