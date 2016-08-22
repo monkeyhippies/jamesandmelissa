@@ -17,6 +17,7 @@ export default class Invitees extends React.Component {
       return(
         <div>
           <h2>{status_message}</h2>
+            <button type="button" className="btn btn-info btn-lg" onClick={this.props.onInviteesClick}>Invitees</button>
           <ul>
             {this.props.invitees.map(invitee =>
               <Invitee

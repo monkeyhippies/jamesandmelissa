@@ -3,6 +3,15 @@ import fetch from 'isomorphic-fetch';
 let nextTodoId = 0
 let nextBoxId = 0
 
+const CHANGE_SELECTED_TAB = 'CHANGE_SELECTED_TAB';
+
+function changeSelectedTab(selectedTab, tabNamespace) {
+    return {
+        type: CHANGE_SELECTED_TAB,
+        tab: selectedTab,
+        namespace: tabNamespace
+    };
+}
 
 export const REQUEST_INVITEES = 'REQUEST_INVITEES'
 function requestInvitees() {
