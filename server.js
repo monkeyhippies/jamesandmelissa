@@ -134,7 +134,7 @@ var SampleApp = function() {
             self.app.get(r, self.routes[r]);
         }
 
-        mongoose.connect('mongodb://localhost/test');
+        mongoose.connect('mongodb://localhost/app');
 
         self.app.get('/api/invitees', function (req, res){
           return Invitee.find(function (err, invitees) {
