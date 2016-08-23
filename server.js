@@ -134,7 +134,15 @@ var SampleApp = function() {
             self.app.get(r, self.routes[r]);
         }
 
-        mongoose.connect('mongodb://localhost/app');
+        var url = '127.0.0.1:27017/' + process.env.OPENSHIFT_APP_NAME;
+
+        // if OPENSHIFT env variables are present, use the available connection info:
+        if (process.env.OPENSHIFT_MONGODB_DB_URL) {
+            url = process.env.OPENSHIFT_MONGODB_DB_URL +
+            process.env.OPENSHIFT_APP_NAME;
+        }
+
+        mongoose.connect(url);
 
         self.app.get('/api/invitees', function (req, res){
           return Invitee.find(function (err, invitees) {
