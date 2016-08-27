@@ -5,6 +5,7 @@ import boxes from './boxes'
 import invitationResponse from './invitationResponse'
 import invitees from './invitees'
 import tabs from './tabs'
+import {routerReducer } from 'react-router-redux'
 
 const todoApp = combineReducers({
   tabs,
@@ -12,7 +13,8 @@ const todoApp = combineReducers({
   invitees,
   boxes,
   todos,
-  visibilityFilter
+  visibilityFilter,
+  routing: routerReducer
 })
 
 export default todoApp

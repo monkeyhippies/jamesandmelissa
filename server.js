@@ -134,7 +134,7 @@ var SampleApp = function() {
             self.app.get(r, self.routes[r]);
         }
 
-        var url = '127.0.0.1:27017/' + process.env.OPENSHIFT_APP_NAME;
+        var url = '127.0.0.1:27017/nodejs';
 
         // if OPENSHIFT env variables are present, use the available connection info:
         if (process.env.OPENSHIFT_MONGODB_DB_URL) {
@@ -153,6 +153,10 @@ var SampleApp = function() {
             }
           });
         });
+
+        self.app.get("*", function(req, res) {
+            res.redirect("/");
+        })
 
     };
 

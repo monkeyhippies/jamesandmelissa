@@ -1,0 +1,144 @@
+@font-face {
+  font-family
+  :
+   
+  "Vollkorn"
+  ;
+  
+    
+  font-style
+  :
+   
+  normal
+  ;
+  
+    
+  font-weight
+  :
+   
+  400
+  ;
+  
+    
+  src
+  :
+   
+  local("Vollkorn Regular")
+  ,
+   
+  local("Vollkorn-Regular")
+  ,
+   
+  url("https://fonts.gstatic.com/s/vollkorn/v6/7jR1T900H5YEkd1UcZhA_fesZW2xOQ-xsNqO47m55DA.ttf")
+   
+  format("truetype")
+  ;
+}
+@font-face {
+  font-family
+  :
+   
+  "Vollkorn"
+  ;
+  
+    
+  font-style
+  :
+   
+  normal
+  ;
+  
+    
+  font-weight
+  :
+   
+  700
+  ;
+  
+    
+  src
+  :
+   
+  local("Vollkorn Bold")
+  ,
+   
+  local("Vollkorn-Bold")
+  ,
+   
+  url("https://fonts.gstatic.com/s/vollkorn/v6/wMZpbUtcCo9GUabw9JODep0EAVxt0G0biEntp43Qt6E.ttf")
+   
+  format("truetype")
+  ;
+}
+@font-face {
+  font-family
+  :
+   
+  "Vollkorn"
+  ;
+  
+    
+  font-style
+  :
+   
+  italic
+  ;
+  
+    
+  font-weight
+  :
+   
+  400
+  ;
+  
+    
+  src
+  :
+   
+  local("Vollkorn Italic")
+  ,
+   
+  local("Vollkorn-Italic")
+  ,
+   
+  url("https://fonts.gstatic.com/s/vollkorn/v6/Oiz0tNwvC-Nd29SBQWfWTC3USBnSvpkopQaUR-2r7iU.ttf")
+   
+  format("truetype")
+  ;
+}
+@font-face {
+  font-family
+  :
+   
+  "Vollkorn"
+  ;
+  
+    
+  font-style
+  :
+   
+  italic
+  ;
+  
+    
+  font-weight
+  :
+   
+  700
+  ;
+  
+    
+  src
+  :
+   
+  local("Vollkorn Bold Italic")
+  ,
+   
+  local("Vollkorn-BoldItalic")
+  ,
+   
+  url("https://fonts.gstatic.com/s/vollkorn/v6/KNiAlx6phRqXCwnZZG51JPEr6Hm6RMS0v1dtXsGir4g.ttf")
+   
+  format("truetype")
+  ;
+}
